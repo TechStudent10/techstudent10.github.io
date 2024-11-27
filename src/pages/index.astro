@@ -1,0 +1,117 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Card from '../components/Card.astro';
+---
+
+<Layout title="underscored">
+	<main>
+		<div class="main">
+		<h1 class="title"><span class="text-gradient">underscored</span></h1>
+			<ul class="links">
+				<li class="link">
+					<a href="https://github.com/TechStudent10" target="_blank">
+						<i class="fa-brands fa-github"></i>
+						github
+					</a>
+				</li>
+				<li class="link">
+					<a href="https://youtube.com/@_scored" target="_blank">
+						<i class="fa-brands fa-youtube"></i>
+						youtube
+					</a>
+				</li>
+				<li class="link">
+					<a href="https://ch.tetr.io/underscored" target="_blank">
+						<i class="fa-solid fa-gamepad"></i>
+						tetra channel
+					</a>
+				</li>
+				<li class="link">
+					<a href="https://ch.tetr.io/underscored" target="_blank">
+						<i class="fa-solid fa-square"></i>
+						geometry dash
+					</a>
+				</li>
+				<li class="link">
+					<a href="https://geode-sdk.org/mods?developer=techstudent10" target="_blank">
+						<i class="fa-solid fa-wrench"></i>
+						geode mods
+					</a>
+				</li>
+			</ul>
+		</div>
+	</main>
+</Layout>
+
+<style>
+	body {
+		/* background-position: 0 50%; */
+
+		animation: 10s infinite alternate bg-anim;
+		/* background-size: 2160px 1440px; */
+	}
+
+	@keyframes bg-anim {
+		from {
+			background-position: 0 0;
+		}
+
+		to {
+			background-position: 1920 1080;
+		}
+	}
+
+	main {
+		width: 100%;
+		height: 100%;
+
+		background-image: url(/underscored\ v2\ bg.png);
+		/* transform: scale(1.5); */
+	}
+	
+	.main {
+		width: 100%;
+		height: 100%;
+		
+		display: flex;
+		flex-direction: column;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: center;
+		
+		gap: 15px;
+		backdrop-filter: blur(10px) brightness(60%);
+		/* transform: scale(1); */
+	}
+	h1 {
+		font-size: 5rem;
+		font-weight: 700;
+		line-height: 1;
+		text-align: center;
+	}
+	.text-gradient {
+		background-image: var(--accent-gradient);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-size: 400%;
+		background-position: 0%;
+	}
+	.links {
+		list-style-type: none;
+		display: flex;
+		flex-direction: row;
+		gap: 20px;
+		color: rgb(87, 87, 87);
+	}
+	a {
+		text-decoration: none;
+		color: inherit;
+		transition: color 0.1s ease-in-out;
+	}
+	a:hover {
+		color: rgb(176, 176, 176);
+	}
+	i {
+		font-size: larger;
+	}
+</style>
